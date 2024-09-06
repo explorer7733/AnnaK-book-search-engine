@@ -1,3 +1,5 @@
+
+const { signToken } = require('../utils/auth');
 const { Book, User } = require('../models');
 
 const resolvers = {
