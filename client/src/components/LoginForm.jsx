@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 
-/*import { loginUser } from '../utils/API';*/
 //Import useMutation hook
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
@@ -29,17 +28,6 @@ const LoginForm = () => {
       event.preventDefault();
       event.stopPropagation();
     }
-
-    /*try {
-      const response = await loginUser(userFormData);
-
-      if (!response.ok) {
-        throw new Error('something went wrong!');
-      }
-
-      const { token, user } = await response.json();
-      console.log(user);
-      Auth.login(token);*/
 
     try {
       const { data } = await loginUser({
